@@ -145,16 +145,20 @@ class scraper_class:
             
         """
         try:
-            abstract = [{'inventor_name':x.get_text()} for x in soup.find_all('dd',itemprop='abstract')]
-        except:
+            abstract = [{'abstract':x.get_text()} for x in soup.select("[class~=abstract]",itemprop='content')]
+            
+            
+        except Exception as e:
+           
             abstract = []
         # Assignee #
         try:
-            title = [{'inventor_name':x.get_text()} for x in soup.find_all('dd',itemprop='title')]
+            title = [{'title':x.get_text()} for x in soup.find('title')]
         except:
             title = []
         # Assignee #
         
+        """
         try:
             inventor_name = [{'inventor_name':x.get_text()} for x in soup.find_all('dd',itemprop='inventor')]
         except:
@@ -237,22 +241,26 @@ class scraper_class:
             for citation in found_backward_cites_family:
                 backward_cites_yes_family.append(self.parse_citation(citation))
 
+        
+        
+        """
+        
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
         #  Return data as a dictionary
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
         return({'title' :json.dumps(title),
                 'abstract':json.dumps(abstract),
-                'inventor_name':json.dumps(inventor_name),
-                'assignee_name_orig':json.dumps(assignee_name_orig),
-                'assignee_name_current':json.dumps(assignee_name_current),
-                'pub_date':pub_date,
-                'priority_date':priority_date,
-                'grant_date':grant_date,
-                'filing_date':filing_date,
-                'forward_cite_no_family':json.dumps(forward_cites_no_family),
-                'forward_cite_yes_family':json.dumps(forward_cites_yes_family),
-                'backward_cite_no_family':json.dumps(backward_cites_no_family),
-                'backward_cite_yes_family':json.dumps(backward_cites_yes_family)})
+                #'inventor_name':json.dumps(inventor_name),
+                #'assignee_name_orig':json.dumps(assignee_name_orig),
+                #'assignee_name_current':json.dumps(assignee_name_current),
+                #'pub_date':pub_date,
+                #'priority_date':priority_date,
+                #'grant_date':grant_date,
+                #'filing_date':filing_date,
+                #'forward_cite_no_family':json.dumps(forward_cites_no_family),
+                #'forward_cite_yes_family':json.dumps(forward_cites_yes_family),
+                #'backward_cite_no_family':json.dumps(backward_cites_no_family),
+                #'backward_cite_yes_family':json.dumps(backward_cites_yes_family)})
 
     def get_scraped_data(self,soup,patent,url):
         # ~~ Parse individual patent ~~ #
