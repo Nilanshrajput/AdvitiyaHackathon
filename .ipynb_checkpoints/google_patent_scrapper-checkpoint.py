@@ -153,10 +153,29 @@ class scraper_class:
             abstract = []
         # Assignee #
         try:
-            title = [{'title':x.get_text()} for x in soup.find('title')]
-        except:
-            title = []
+            title =  soup.find('title').get_text()
+        except Exception as e:
+            title = []  
         # Assignee #
+        
+        try:
+            claims = [{'claims':x.get_text()} for x in soup.select(".claim-text",limit = 100)]
+            
+            
+        except Exception as e:
+           
+            claims = []
+            
+        
+        try:
+            classification = [{'classifaiction':x.get_text()} for x in soup.find_all('span',itemprop='Description')]
+            
+            
+        except Exception as e:
+           
+            classification = []
+            
+        
         
         """
         try:
@@ -250,6 +269,8 @@ class scraper_class:
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
         return({'title' :json.dumps(title),
                 'abstract':json.dumps(abstract),
+                'claims':json.dumps(claims),
+                'classification':json.dumps(classification)})
                 #'inventor_name':json.dumps(inventor_name),
                 #'assignee_name_orig':json.dumps(assignee_name_orig),
                 #'assignee_name_current':json.dumps(assignee_name_current),
