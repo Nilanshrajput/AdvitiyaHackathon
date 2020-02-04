@@ -96,7 +96,19 @@ class scraper_class:
         except HTTPError as e:
             print('Patent: {0}, Error Status Code : {1}'.format(patent,e.code))
             return(e.code,'',url)
-
+    
+    def scrap_single_patent(self,patent,url=False):
+        
+        error_status, soup, url = self.request_single_patent(patent)
+        if error_status=='Success':
+            parsed_patent = self.get_scraped_data(soup,patent,url)
+        else:
+            parsed_patent = None
+            print("failed search, try checking patent number, or pass patent link in place of patent with passing url =True")
+            
+        return parsed_patent
+    
+    
     def parse_citation(self,single_citation):
         """Parses patent citation, returning results as a dictionary
         Returns (variables returned in dictionary, following are key names):  
