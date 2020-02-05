@@ -99,7 +99,7 @@ class scraper_class:
         """
         try:
             if not url:
-                url='https://patents.google.com/patent/{0}'.format(patent)
+                url='https://patents.google.com/patent/{0}/en?'.format(patent)
             else:
                 url=patent
             #print(url)
