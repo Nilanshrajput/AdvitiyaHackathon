@@ -175,12 +175,13 @@ class scraper_class:
             
             
         except Exception as e:
-           
+            print(e)
             abstract = []
         # Assignee #
         try:
             title =  soup.find('title').get_text()
         except Exception as e:
+            print(e)
             title = []  
         # Assignee #
         
@@ -189,7 +190,7 @@ class scraper_class:
             
             
         except Exception as e:
-           
+            print(e)
             claims = []
             
         
@@ -198,7 +199,7 @@ class scraper_class:
             
             
         except Exception as e:
-           
+            print(e)
             classification = []
             
         
@@ -250,7 +251,6 @@ class scraper_class:
                     pub_date = timeevent
             except:
                 continue 
-
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
         #             Citations
         #
@@ -264,28 +264,24 @@ class scraper_class:
         if len(found_forward_cites_orig)>0:
             for citation in found_forward_cites_orig:
                 forward_cites_no_family.append(self.parse_citation(citation))
-
         # ~~~ Forward Citations (Yes Family to Family) ~~~ #
         found_forward_cites_family=soup.find_all('tr', itemprop="forwardReferencesFamily")
         forward_cites_yes_family=[]
         if len(found_forward_cites_family)>0:
             for citation in found_forward_cites_family:
                 forward_cites_yes_family.append(self.parse_citation(citation))
-
         # ~~~ Backward Citations (No Family to Family) ~~~ #
         found_backward_cites_orig = soup.find_all('tr', itemprop='backwardReferences')
         backward_cites_no_family=[]
         if len(found_backward_cites_orig)>0:
             for citation in found_backward_cites_orig:
                 backward_cites_no_family.append(self.parse_citation(citation))
-
         # ~~~ Backward Citations (Yes Family to Family) ~~~ #
         found_backward_cites_family = soup.find_all('tr', itemprop='backwardReferencesFamily')
         backward_cites_yes_family=[]
         if len(found_backward_cites_family)>0:
             for citation in found_backward_cites_family:
                 backward_cites_yes_family.append(self.parse_citation(citation))
-
         
         
         """
