@@ -150,8 +150,16 @@ class scraper_class:
         return({'patent_number':patent_number,
                 'priority_date':priority_date,
                 'pub_date':pub_date})
-
-    def process_patent_html(self,soup):
+    
+    def clean_scrapped(self,string, patent):
+        string=string.replace('{}'.format(patent), '')
+        string=string.replace('Google Patents','')
+        string=string.replace(';\n',' ')
+        string=string.replace('\n',' ')
+        
+        return string
+    
+    def process_patent_html(self,soup,patent):
         """ Parse patent html using BeautifulSoup module
         Returns (variables returned in dictionary, following are key names): 
             - application_number        (str)   : application number
@@ -171,22 +179,27 @@ class scraper_class:
             
         """
         try:
-            abstract = [{'abstract':x.get_text()} for x in soup.select("[class~=abstract]",itemprop='content')]
+            abstract=""
+            for x in soup.select("[class~=abstract]",itemprop='content'): abstract+=(" "+x.get_text())
+            abstract =  self.clean_scrapped(abstract, patent)
             
             
         except Exception as e:
             print(e)
             abstract = []
         # Assignee #
+        
         try:
-            title =  soup.find('title').get_text()
+            title =  self.clean_scrapped( soup.find('title').get_text(), patent)
         except Exception as e:
             print(e)
             title = []  
         # Assignee #
         
         try:
-            claims = [{'claims':x.get_text()} for x in soup.select(".claim-text",limit = 100)]
+            claims = ""
+            for x in soup.select(".claim-text",limit = 120) : claims+=(" "+ x.get_text())
+            claims = self.clean_scrapped(claims, patent)
             
             
         except Exception as e:
@@ -195,7 +208,9 @@ class scraper_class:
             
         
         try:
-            classification = [{'classifaiction':x.get_text()} for x in soup.find_all('span',itemprop='Description')]
+            classification = ""
+            for x in soup.find_all('span',itemprop='Description'): classification+=(" "+x.get_text())
+            classification = self.clean_scrapped(classification, patent)
             
             
         except Exception as e:
@@ -307,7 +322,7 @@ class scraper_class:
 
     def get_scraped_data(self,soup,patent,url):
         # ~~ Parse individual patent ~~ #
-        parsing_individ_patent = self.process_patent_html(soup)
+        parsing_individ_patent = self.process_patent_html(soup, patent)
         # ~~ Add url + patent to dictionary ~~ #
         parsing_individ_patent['url'] = url
         parsing_individ_patent['patent'] = patent
