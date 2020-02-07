@@ -1,0 +1,5 @@
+bertv3_claims_128_64_50.pth - 96-98
+
+bertv1_128_60.pth- 96
+
+bertv2_224_32_50.pth -96- 97
