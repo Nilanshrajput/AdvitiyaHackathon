@@ -1,6 +1,7 @@
 # AdvitiyaHackathon
 submission for advitiya techfest AI Hackkathon
 
+Bert Fine Tuning using Hugging Face Transformer Library.
 
 File details :
 
@@ -18,6 +19,8 @@ Validation acuracy of model were 100% for 2 and 99% for 1 out of 3 used model.Fi
 3. finalbertv6_classification_512_8_20.pth
 
 All are present in the folder named Models in above link.
+
+Software Stack :  Pytorch, Transformers, Beautifulsoup, Numpy, Pandas, Matplotlib
 
 
             
@@ -53,5 +56,7 @@ All are present in the folder named Models in above link.
               
 Software Stack :  Pytorch, Transformer, Beautifulsoup, Numpy, Pandas, Matplotlib
 
-The Code was designed to run on Google colab for training and evaluation, and scrapping. The whole data was on my google drive sue to large size of Model weights, and data. SO appropraiate path changes might be required.
+The Code was designed to run on Google colab for training and evaluation, and scrapping. The whole data was on my google drive sue to large size of Model weights, and data. So appropriate path changes might be required.
+
+Some garbage files are here and some notusefull uncommentned code, which will be cleared shortly.
 
