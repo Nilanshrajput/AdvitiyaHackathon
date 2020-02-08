@@ -1,9 +1,7 @@
-# AdvitiyaHackathon
-submission for advitiya techfest AI Hackkathon
+# Advitiya Hackathon
+Submission for Advitiya Techfest AI Hackathon
 
 Bert Fine Tuning using Hugging Face Transformer Library.
-
-File details :
 
 
 Test data output - In Folder Submission with file name submission.csv
@@ -21,6 +19,7 @@ Validation acuracy of model were 100% for 2 and 99% for 1 out of 3 used model.Fi
 All are present in the folder named Models in above link.
 
 Software Stack :  Pytorch, Transformers, Beautifulsoup, Numpy, Pandas, Matplotlib
+File details :
 
 
             
@@ -54,9 +53,10 @@ Software Stack :  Pytorch, Transformers, Beautifulsoup, Numpy, Pandas, Matplotli
               - Drive folder containf all the data files including model weights, scrapped data in json format, CSV format cleaned data etc.
               
               
-Software Stack :  Pytorch, Transformer, Beautifulsoup, Numpy, Pandas, Matplotlib
 
+***
 The Code was designed to run on Google colab for training and evaluation, and scrapping. The whole data was on my google drive sue to large size of Model weights, and data. So appropriate path changes might be required.
+***
 
 Some garbage files are here and some notusefull uncommentned code, which will be cleared shortly.
 
