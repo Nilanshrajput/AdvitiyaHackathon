@@ -1,4 +1,12 @@
 
+final classification - 100, error 0.00
+final claims - 100, error 0.01
+final abstract - .99 error 0.00
+
+
+
+
+
 ***
 bertv4_claims_512_8_25  - 99%, error 0.00
 ***
