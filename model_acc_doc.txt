@@ -5,7 +5,7 @@ bertv4_claims_512_8_25  - 99%, error 0.00
 
 bertv5_abstract_512_4_20 - 99%, error 0.00
 
-bertv5_abstract_512_8_20_spacecorrected -  99%, error 0.00
+bertv5_abstract_512_4_20_spacecorrected -  99%, error 0.00
 
 
 bertv3_claims_128_64_50.pth - 96-98
