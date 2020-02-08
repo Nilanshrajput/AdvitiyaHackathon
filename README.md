@@ -2,10 +2,11 @@
 Submission for Advitiya Techfest AI Hackathon
 
 Bert Fine Tuning using Hugging Face Transformer Library.
-
+***
+Training Code file - BertV2_Final_Version.ipynb
 
 Test data output - In Folder Submission with file name submission.csv
-
+***
 Model File link - https://drive.google.com/drive/folders/1LvRBKB9kPmhkL1iyjrywyjaN_W9FKKFj?usp=sharing
 above link contains all data and model file.
 
@@ -31,7 +32,7 @@ File details :
                             
              -Scrapper.ipynb :Scrap the data of patents from web, and cleans and organise the data in seprate json file for each patent.
              
-             -Bert_finetuned_system.ipynb : Fine tuning Bert Model for patent classification, using Transformer Library from Hugging face and Pytorch.
+             -BertV2_Final_Version.ipynb : Fine tuning Bert Model for patent classification, using Transformer Library from Hugging face and Pytorch.
                              
                              Training Details : Multiple models were trained eith diffrent token sizes, LR, Batch sizes, diffrent number of epochs.
                                                  Get good results at traing at LR = 2e-5 for 20 Epochs and another 20 epochs at LR = 3e-5(4e-5 also       
