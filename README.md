@@ -5,17 +5,22 @@ submission for advitiya techfest AI Hackkathon
 File details :
 
 
-Test data output - In Folder submission with file name submission.csv
+Test data output - In Folder Submission with file name submission.csv
 
 Model File link - https://drive.google.com/drive/folders/1LvRBKB9kPmhkL1iyjrywyjaN_W9FKKFj?usp=sharing
 above link contains all data and model file.
 
 The code is made to run on Google colab so some files might need path changes
 
-Validation acuracy of model were 100% for 2 and 99% for 1 out of 3 used model.
+Validation acuracy of model were 100% for 2 and 99% for 1 out of 3 used model.Final models to use - 
+1. finalbertv4_claims_512_8_20.pth
+2. finalbertv5_abstract_512_8_20_spacecorrected.pth
+3. finalbertv6_classification_512_8_20.pth
+
+All are present in the folder named Models in above link.
 
 
-
+            
             - BasicEDA.ipynb : EDA of given data and making updating label names to label codes in TrainCSV
                             code - "0" - Non-Alcohol
                             code - "1" - Alcohol
