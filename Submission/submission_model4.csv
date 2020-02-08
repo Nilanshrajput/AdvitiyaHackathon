@@ -6,7 +6,7 @@
 4,US20150080469A1,Non-Alcohol
 5,US20150079269A1,Non-Alcohol
 6,US20150079232A1,Non-Alcohol
-7,US20150079207A1,Non-Alcohol
+7,US20150079207A1,Alcohol
 8,US20150079157A1,Non-Alcohol
 9,US20150073125A1,Non-Alcohol
 10,US20150072060A1,Non-Alcohol
@@ -70,7 +70,7 @@
 68,US20150021794A1,Alcohol
 69,US20150014272A1,Alcohol
 70,US20150000530A1,Alcohol
-71,EP2013327B1,Non-Alcohol
+71,EP2013327B1,Alcohol
 72,EP2496758B1,Alcohol
 73,EP2250274B1,Alcohol
 74,EP2592135B1,Alcohol
@@ -105,7 +105,7 @@
 103,CN105320025A,Non-Autonomous Vehicles
 104,US20160016479A1,Non-Autonomous Vehicles
 105,US20160016475A1,Non-Autonomous Vehicles
-106,CN105270292A,Non-Autonomous Vehicles
+106,CN105270292A,Autonomous Vehicles
 107,US20160016469A1,Non-Autonomous Vehicles
 108,US20160016465A1,Non-Autonomous Vehicles
 109,CN105313803A,Non-Autonomous Vehicles
@@ -146,7 +146,7 @@
 144,US20160009251A1,Non-Autonomous Vehicles
 145,US20170031446A1,Autonomous Vehicles
 146,US20170030725A1,Autonomous Vehicles
-147,US20160379494A1,Non-Autonomous Vehicles
+147,US20160379494A1,Autonomous Vehicles
 148,CN106256643A,Autonomous Vehicles
 149,US20160347383A1,Autonomous Vehicles
 150,US20160311480A1,Autonomous Vehicles
@@ -170,7 +170,7 @@
 168,EP3154063A1,Autonomous Vehicles
 169,EP2681635A4,Autonomous Vehicles
 170,WO2016109540A1,Autonomous Vehicles
-171,WO2016107674A1,Non-Autonomous Vehicles
+171,WO2016107674A1,Autonomous Vehicles
 172,WO2016096304A1,Autonomous Vehicles
 173,WO2016096240A1,Autonomous Vehicles
 174,WO2016088147A1,Autonomous Vehicles
