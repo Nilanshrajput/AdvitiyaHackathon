@@ -4,8 +4,8 @@ Submission for Advitiya Techfest AI Hackathon
 Bert Fine Tuning using Hugging Face Transformer Library.
 ***
 Training Code file - BertV2_Final_Version.ipynb
-
-Test data output - In Folder Submission with file name submission.csv
+**Submission File**
+Test data output - In Folder Submission with file name submission.csv, Multiple submission files are present each considering  diffrent models and with diffrent  behaviour of  each  model for  diffrent classes. All have  almost same output with diffrence  in 4-5 patents only.If all of them can't be evaluated then file "submission.csv" should be considerd.
 ***
 Model File link -https://drive.google.com/drive/folders/1LvRBKB9kPmhkL1iyjrywyjaN_W9FKKFj?usp=sharing
 above link contains all data and model file.
