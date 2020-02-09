@@ -7,7 +7,7 @@ Training Code file - BertV2_Final_Version.ipynb
 
 Test data output - In Folder Submission with file name submission.csv
 ***
-Model File link - https://drive.google.com/drive/folders/1LvRBKB9kPmhkL1iyjrywyjaN_W9FKKFj?usp=sharing
+Model File link -https://drive.google.com/drive/folders/1LvRBKB9kPmhkL1iyjrywyjaN_W9FKKFj?usp=sharing
 above link contains all data and model file.
 
 The code is made to run on Google colab so some files might need path changes
